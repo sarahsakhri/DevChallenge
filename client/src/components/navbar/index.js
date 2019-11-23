@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { Nav, NavItem, NavLink, Navbar, Collapse, NavbarToggler, NavbarBrand, Container } from 'reactstrap';
+import { MDBNavbar, MDBCollapse, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBContainer } from 'mdbreact';
 
 class NavbarToDo extends Component {
 
     state = {
         isOpen: false
     }
-
 
     toggle = () => {
         this.setState({
@@ -16,23 +15,23 @@ class NavbarToDo extends Component {
 
     render() {
         return (
-            <div>
-                <Navbar color="dark" dark expand="sm" className="mb-5">
-                    <Container>
-                        <NavbarBrand href="/#">TO DO LIST</NavbarBrand>
-                        <NavbarToggler onClick={this.toggle} />
-                        <Collapse isOpen={this.state.isOpen} navbar>
-                            <Nav className="ml-auto" navbar>
-                                <NavItem>
-                                    <NavLink href="/#">
-                                        Completed Tasks
-                                    </NavLink>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
-                    </Container>
-                </Navbar>
-            </div>
+            <header>
+                <MDBNavbar style={{ backgroundColor: "#212121" }} dark expand="md" >
+                    <MDBContainer>
+                        <MDBNavbarBrand>
+                            <strong>To Do </strong>
+                        </MDBNavbarBrand>
+                        <MDBNavbarToggler onClick={this.toggle} />
+                        <MDBCollapse isOpen={this.state.isOpen} navbar>
+                            <MDBNavbarNav left style={{ color: "white" }} right>
+                                <MDBNavItem>
+                                    <div></div>
+                                </MDBNavItem>
+                            </MDBNavbarNav>
+                        </MDBCollapse>
+                    </MDBContainer>
+                </MDBNavbar>
+            </header>
         )
     }
 }

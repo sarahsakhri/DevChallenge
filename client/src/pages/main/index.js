@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-
-import ToDo from '../todoList'
+import Quote from '../../components/quoteOfDay';
+import ToDo from '../todoList';
+import { MDBContainer } from 'mdbreact';
 
 class Main extends Component {
+
     render() {
         return (
-            <ToDo></ToDo>
+            <div>
+                <MDBContainer className="mainContainer">
+                    <Quote />
+                    <ToDo />
+                </MDBContainer>
+            </div>
+
         )
     }
 }

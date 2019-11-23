@@ -1,17 +1,16 @@
-import React, { Component } from "react";
-import { Container } from 'reactstrap';
+import React from "react";
+import { MDBContainer, MDBFooter } from 'mdbreact';
 
 function Footer() {
     return (
-        <footer className="sticky-footer">
+        <MDBFooter style={{ backgroundColor: "#212121" }}>
             <div className="footer-copyright text-center py-3">
-                <Container fluid>
-                    &copy; {new Date().getFullYear()} Copyright: Sarah Sakhri
-                </Container>
+                <MDBContainer fluid>
+                    &copy; {new Date().getFullYear()} <a href="https://github.com/sarahsakhri/DevChallenge"> Github Link </a>
+                </MDBContainer>
             </div>
-        </footer>
+        </MDBFooter>
     )
 }
-
 
 export default Footer;

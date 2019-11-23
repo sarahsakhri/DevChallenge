@@ -1,0 +1,27 @@
+.mainContainer {
+    min-height: calc(100vh - 110.5px);
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.pending {
+    background-color: #FFFF00;
+}
+
+.done {
+    background-color: aquamarine;
+}
