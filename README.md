@@ -12,6 +12,7 @@ npm start
 ```
 
 ## Technologies used:
+- reactJS
 - bootstrap
 - mdbreact 
 - axios 
