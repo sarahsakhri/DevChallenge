@@ -2,17 +2,15 @@ import React, { Component } from 'react';
 import { MDBNavbar, MDBCollapse, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBContainer } from 'mdbreact';
 
 class NavbarToDo extends Component {
+    // state = {
+    //     isOpen: false
+    // }
 
-    state = {
-        isOpen: false
-    }
-
-    toggle = () => {
-        this.setState({
-            isOpen: !this.state.isOpen
-        })
-    }
-
+    // toggle = () => {
+    //     this.setState({
+    //         isOpen: !this.state.isOpen
+    //     })
+    // }
     render() {
         return (
             <header>
@@ -21,14 +19,14 @@ class NavbarToDo extends Component {
                         <MDBNavbarBrand>
                             <strong>To Do </strong>
                         </MDBNavbarBrand>
-                        <MDBNavbarToggler onClick={this.toggle} />
+                        {/* <MDBNavbarToggler onClick={this.toggle} />
                         <MDBCollapse isOpen={this.state.isOpen} navbar>
                             <MDBNavbarNav left style={{ color: "white" }} right>
                                 <MDBNavItem>
                                     <div></div>
                                 </MDBNavItem>
                             </MDBNavbarNav>
-                        </MDBCollapse>
+                        </MDBCollapse> */}
                     </MDBContainer>
                 </MDBNavbar>
             </header>

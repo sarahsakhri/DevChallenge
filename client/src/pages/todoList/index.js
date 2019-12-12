@@ -115,12 +115,7 @@ class ToDo extends Component {
         this.toggleEdit();
         console.log(title + desc + due + id);
         this.setState({
-            edit: true,
-            id: id,
-            title: title,
-            desc: desc,
-            due: due
-
+            edit: true, id, title, desc, due
         });
     }
 
@@ -135,8 +130,8 @@ class ToDo extends Component {
                     task.title = e.target.newTitle.value;
                     task.desc = e.target.newDesc.value;
                     task.due = e.target.newDue.value;
-                    return task;
                 }
+                console.log(task)
                 return task;
             })
         })
@@ -148,8 +143,8 @@ class ToDo extends Component {
             list: this.state.list.map(task => {
                 if (task.id === id) {
                     task.status = !task.status;
-                    return task;
                 }
+                console.log(task)
                 return task;
             })
         })
@@ -170,7 +165,7 @@ class ToDo extends Component {
                     {list.map(({ id, title, desc, due, status }) => (
                         <MDBListGroupItem key={id}>
                             <MDBRow className="align-items-center">
-                                <MDBCol md="9" sm="12" className="ml-auto">
+                                <MDBCol md="8" sm="12" className="ml-auto">
                                     <div className="d-flex w-100 justify-content-between">
                                         <h5 className="mb-1"><b> {title} </b></h5>
                                     </div>
@@ -179,7 +174,7 @@ class ToDo extends Component {
                                     <br></br>
                                     <small className={(status) ? 'done' : 'pending'}><b>Status of this task :</b> {(status ? "DONE" : "PENDING")}</small>
                                 </MDBCol>
-                                <MDBCol md="3" className="ml-auto">
+                                <MDBCol md="4" className="ml-auto">
                                     <MDBBtn color="secondary" size="sm" onClick={this.editHandle.bind(this, id, title, desc, due)} ><MDBIcon icon="edit" /></MDBBtn>
                                     {this.editForm()}
                                     <MDBBtn color="light-green" size="sm" onClick={this.statusHandle.bind(this, id)} ><MDBIcon icon="check" /></MDBBtn>
